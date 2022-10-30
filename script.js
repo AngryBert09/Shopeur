@@ -3,7 +3,7 @@ function myfunction() {
   let password = document.getElementById("lname").value;
 
   if (username == "Albert" && password == "cute") {
-    alert("LOGIN SUCCESS");
+    alert("LOGIN SUCCESSFULLY");
   } else {
     alert("ERROR DETAILS");
   }

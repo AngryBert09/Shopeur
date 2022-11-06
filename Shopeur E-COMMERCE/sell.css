@@ -220,19 +220,5 @@ body2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
-    to right top,
-    #af83d1,
-    #8b94e4,
-    #5fa4eb,
-    #2db0e8,
-    #00badb,
-    #0bbfca,
-    #3dc2b5,
-    #62c49f,
-    #85c38a,
-    #a4c07c,
-    #c1bc75,
-    #dab678
-  );
+  background: linear-gradient(to right, #c07edc, #98e3ef);
 }

@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="sell.css">
     <link rel="shortcut icon" type="home-icon" href="images/tablogo3.ico">
+    <script src="login.JS" ></script>
 </head>
 <body>
     <section class="main">
         <header>
-            <a href="home.html"><img src="images/logo.png" class="logo"></a>
+            <a id="insell" href="home.html" onclick = "define()" ><img src="images/logo.png" class="logo"></a>
             <div class="toggle"></div>
             <ul class="navigation">
-                <li><a href="home.html">HOME</a></li>
+                <li><a id="sellhome" href="home.html" onclick = "define()">HOME</a></li>
                 <li><a href="sell.html">SELL ON SHOPEUR</a></li>
                 <li><a href="track.html">TRACK MY ORDER</a></li>
                 <li><a href="care.html">CUSTOMER CARE</a></li>
@@ -275,7 +276,7 @@
         <ul2 class="pagination">
             <li><a href="#" class="prev"></a></li>
             <li class="pageNumber active"><a href="sell.html">1</a></li>
-            <li class="pageNumber"><a href="sellpage2.html">2</a></li>
+            <li class="pageNumber"><a href="sellpage2.html" >2</a></li>
             <li class="pageNumber"><a href="sellpage3.html">3</a></li>
             <li class="pageNumber"><a href="sellpage4.html">4</a></li>
             <li class="pageNumber"><a href="sellpage5.html">5</a></li>

@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 100px;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #af83d1,
+    #789ce9,
+    #31afe9,
+    #00bdd6,
+    #25c3be,
+    #57c5a2,
+    #83c586,
+    #a5c178,
+    #c2bc73,
+    #dab678,
+    #ecb185
+  );
+}
+.card {
+  width: 390px;
+  height: 554px;
+  background-image: linear-gradient(
+    to right top,
+    #21e86d,
+    #b73496,
+    #21e86d,
+    #b73496,
+    #21e86d,
+    #b73496,
+    #d5ff00,
+    #4b72dd,
+    #d5ff00,
+    #4b72dd,
+    #d5ff00,
+    #4b72dd
+  );
+  border-radius: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  width: 390px;
+  height: 554px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.card2:hover {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+button {
+  padding: 10px 100px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+button:hover {
+  color: #e8e8e8;
+}
+button:hover::before {
+  width: 100%;
+}
+.inputBox {
+  position: relative;
+  width: 240px;
+  height: 40%;
+  flex-direction: column;
+  display: flex;
+}
+.inputBox input {
+  position: relative;
+  width: 250px;
+  height: 20%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+  margin-top: 50%;
+  margin-left: 27%;
+}
+body2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 30px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.logo {
+  max-width: 90px;
+}
+.navigation {
+  display: flex;
+}
+.navigation li {
+  list-style: none;
+}
+.navigation li a {
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-left: 40px;
+}
+.inputBox input {
+  padding: 10px 20px;
+}
+.inputBox span {
+  position: absolute;
+  text-align: center;
+  width: 190px;
+  margin-left: 50%;
+  margin-top: 39%;
+  display: flex;
+  pointer-events: none;
+  font-size: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.9s;
+  outline: none;
+}
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span {
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  color: #00dfc4;
+  border-radius: 2px;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #00dfc4;
+  transform: translateX(-7px) translateY(10px);
+  font-size: 0.85em;
+  padding: 0 10px;
+  background: #1d2b3a;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 1px solid #00dfc4;
+}

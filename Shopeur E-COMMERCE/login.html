@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="shortcut icon" type="home-icon" href="images/tablogo3.ico" />
+    <script src="login.JS"></script>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="images/11.20SALE IMAGE.png" />
+    </div>
+    <div class="box">
+      <form autocomplete="off">
+        <h2>Sign in</h2>
+        <div class="inputBox">
+          <input type="text" required="required" id="USERNAME" />
+          <span>Username</span>
+          <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="password" required="required" id="PASSWORD" />
+          <span>Password</span>
+          <i></i>
+        </div>
+        <div class="links">
+          <a href="forgot.html">Forgot Password ?</a>
+          <a href="signup.html">Signup</a>
+        </div>
+        <input type="Button" value="Login" id="submit" onclick="validate()" />
+      </form>
+    </div>
+  </body>
+</html>

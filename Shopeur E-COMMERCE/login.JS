@@ -1,4 +1,5 @@
 var attempt = 3;
+var isLogin = true;
 
 function validate() {
   var username = document.getElementById("USERNAME").value;
@@ -20,7 +21,15 @@ function validate() {
     }
   }
 }
-document.querySelector(".action").addEventListener("click", red);
-function red() {
-  alert("Hello World!");
+//DETECTS IF THE WINDOW IS IN DARK MODE THEN IT WILL DISPLAY AN WHITE VERSION
+// OF THE LOGO
+let matched = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (matched) {
+  document.getElementById("homeicon").href = "images/whitelogo.ico";
+}
+
+document.addEventListener("click", test);
+
+function test() {
+  document.getElementsById("heart").href = "login.html";
 }

@@ -50,6 +50,7 @@ header {
 }
 .navigation li {
   list-style: none;
+  cursor: pointer;
 }
 .navigation li img {
   position: relative;

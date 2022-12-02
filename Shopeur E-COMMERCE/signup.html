@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="signup.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="loading.css" />
     <link
       id="homeicon"
       rel="shortcut icon"
@@ -13,6 +14,16 @@
     <script src="login.JS"></script>
   </head>
   <body>
+    <div id="preloader">
+      <img src="images/loadinglogo.png" alt="" />
+    </div>
+    <script>
+      window.addEventListener("load", function () {
+        var loader = document.getElementById("preloader");
+        loader.style.display = "none";
+        loader.delay(10).fadeOut("10");
+      });
+    </script>
     <div class="container">
       <div class="title">Register to Shopeur</div>
       <div class="content">

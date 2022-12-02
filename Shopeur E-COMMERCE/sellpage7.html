@@ -7,6 +7,7 @@
     <Title> Sell on Shopeur </Title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="sell.css">
+    <link rel="stylesheet" href="loading.css">
     <link
     id="homeicon"
     rel="shortcut icon"
@@ -16,6 +17,16 @@
   <script src="login.JS"></script>
 </head>
 <body>
+    <div id="preloader">
+        <img src="images/loadinglogo.png" alt="" />
+      </div>
+      <script>
+        window.addEventListener("load", function () {
+          var loader = document.getElementById("preloader");
+          loader.style.display = "none";
+          loader.delay(10).fadeOut("10");
+        });
+      </script>
     <section class="main">
         <header>
             <a href="home.html"><img src="images/logo.png" class="logo"></a>
@@ -24,7 +35,7 @@
                 <li><a href="home.html">HOME</a></li>
                 <li><a href="sell.html">SELL ON SHOPEUR</a></li>
                 <li><a href="track.html">TRACK MY ORDER</a></li>
-                <li><a href="care.html">CUSTOMER CARE</a></li>
+                <li><a href="care.html">FAQS</a></li>
             </ul>
         </header>
         <div class="container">

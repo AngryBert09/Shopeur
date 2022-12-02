@@ -12,7 +12,7 @@ function validate() {
   } else {
     username = document.getElementById("USERNAME").value = "";
     password = document.getElementById("PASSWORD").value = "";
-    attempt--; // Decrementing by one.
+    attempt--; // Decrementing by one
     alert("YOU HAVE ONLY " + attempt + " ATTEMPTS");
 
     if (attempt == 0) {
@@ -29,7 +29,7 @@ if (matched) {
 }
 
 document.addEventListener("click", test);
-
+s;
 function test() {
   document.getElementsById("heart").href = "login.html";
 }

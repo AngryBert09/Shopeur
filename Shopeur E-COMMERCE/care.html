@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <Title> Shopeur </Title>
+    <Title> FAQS </Title>
     <link rel="stylesheet" href="care.css">
     <link id="homeicon" rel="shortcut icon" type="home-icon" href="images/tablogo3.ico">
     <script src="login.JS"></script>
+    <link rel="stylesheet" href="loading.css">
 
 </head>
 
@@ -15,20 +16,30 @@
         <a href="home.html"><img src="images/logo.png" class="logo"></a>
         <div class="toggle"></div>
         <ul class="navigation">
-            <li><a href="home.html">HOME</a></li>
+  
             <li><a href="sell.html">SELL ON SHOPEUR</a></li>
             <li><a href="track.html">TRACK MY ORDER</a></li>
-            <li><a href="care.html">CUSTOMER CARE</a></li>
+            <li><a href="care.html">FAQS</a></li>
         </ul>
     </header>
 <body>
+    <div id="preloader">
+        <img src="images/loadinglogo.png" alt="" />
+      </div>
+      <script>
+        window.addEventListener("load", function () {
+          var loader = document.getElementById("preloader");
+          loader.style.display = "none";
+          loader.delay(10).fadeOut("10");
+        });
+      </script>
     <div class="container">
         <h1>Frequently asked questions?</h1>
         <div class="tab">
             <input type="radio" name="acc" id="acc1">
             <label for="acc1">
                 <h2>01</h2>
-                <h3>What are the available Installment payment plans?</h3>
+                <h3 >What are the available Installment payment plans?</h3>
             </label>
             <div class="content"><p>I. For Credit card holders</p><p><b>A.</b> BDO Credit card</p><p>BDO Credit Card We offer 3-month, 6-month, 12-month, 18-month, 24-month and 36-month payment installations to all BDO credit cardholders. Minimum purchase for BDO Installment is Php 2,000</p>
                 <p><b>B.</b> Mastercard</p><p>Mastercard We offer 3-month, 6-month, 12-month installations to all Mastercard holders.</p>
@@ -74,4 +85,5 @@
         </div>
     </div>
 </body>
+
 </html>

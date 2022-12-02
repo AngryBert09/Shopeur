@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <Title> Track my Order </Title>
     <link rel="stylesheet" href="track.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="style.css">
     <link
     id="homeicon"
     rel="shortcut icon"
@@ -15,13 +17,23 @@
   <script src="login.JS"></script>
 </head>
 <body2>
+    <div id="preloader">
+        <img src="images/loadinglogo.png" alt="" />
+      </div>
+      <script>
+        window.addEventListener("load", function () {
+          var loader = document.getElementById("preloader");
+          loader.style.display = "none";
+          loader.delay(10).fadeOut("10");
+        });
+      </script>
     <section class="main">
         <header>
-            <a id="intrack" href="inside.html" onclick = "Determine()" ><img src="images/logo.png" class="logo"></a>
+            <a id="intrack" href="inside.html" ><img src="images/logo.png" class="logo"></a>
             <div class="toggle"></div>
             <ul class="navigation">
                 <li><a href="inside.html">HOME</a></li>
-                <li><a href="sellinside.html">SELL ON SHOPEUR</a></li>
+                <li><a href="SELLINSIDE1.html">SELL ON SHOPEUR</a></li>
                 <li><a href="TRACKINSIDE.html">TRACK MY ORDER</a></li>
                 <li><a href="CAREINSIDE.html">CUSTOMER CARE</a></li>
             </ul>

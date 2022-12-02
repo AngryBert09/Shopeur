@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <Title> Shopeur </Title>
+    <Title> FAQS </Title>
     <link rel="stylesheet" href="care.css">
     <link id="homeicon" rel="shortcut icon" type="home-icon" href="images/tablogo3.ico">
     <script src="login.JS" defer></script>
+    <link rel="stylesheet" href="loading.css">
 </head>
 
 <section class="main">
@@ -15,12 +16,22 @@
         <div class="toggle"></div>
         <ul class="navigation">
             <li><a href="inside.html">HOME</a></li>
-            <li><a href="sellinside.html">SELL ON SHOPEUR</a></li>
+            <li><a href="SELLINSIDE1.html">SELL ON SHOPEUR</a></li>
             <li><a href="TRACKINSIDE.html">TRACK MY ORDER</a></li>
-            <li><a href="CAREINSIDE.html">CUSTOMER CARE</a></li>
+            <li><a href="CAREINSIDE.html">FAQS</a></li>
         </ul>
     </header>
 <body>
+    <div id="preloader">
+        <img src="images/loadinglogo.png" alt="" />
+      </div>
+      <script>
+        window.addEventListener("load", function () {
+          var loader = document.getElementById("preloader");
+          loader.style.display = "none";
+          loader.delay(10).fadeOut("10");
+        });
+      </script>
     <div class="container">
         <h1>Frequently asked questions?</h1>
         <div class="tab">

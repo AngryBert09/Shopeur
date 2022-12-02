@@ -7,6 +7,7 @@
     <Title> Sell on Shopeur </Title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="SELLINSIDECSS.css">
+    <link rel="stylesheet" href="loading.css">
     <link
     id="homeicon"
     rel="shortcut icon"
@@ -14,8 +15,19 @@
     href="images/tablogo3.ico"
   />
   <script src="login.JS"></script>
+  <script src="SELLFUNCTION.js" defer></script>
 </head>
 <body>
+    <div id="preloader">
+        <img src="images/loadinglogo.png" alt="" />
+      </div>
+      <script>
+        window.addEventListener("load", function () {
+          var loader = document.getElementById("preloader");
+          loader.style.display = "none";
+          loader.delay(10).fadeOut("10");
+        });
+      </script>
     <section class="main">
         <header>
             <a href="inside.html"><img src="images/logo.png" class="logo"></a>
@@ -28,8 +40,7 @@
                    </button>
                  </div>
               </div>
-           <li><img src="images/icons8-shopping-cart-25.png" alt=""></li>
-           <li><img src="images/icons8-heart-plus-25.png" alt=""></li>
+           <li><img src="images/Sell Shop Images/cart.png" alt="" id="cart"></li>
             </ul>
         </header>
         <div class="container">
@@ -37,10 +48,10 @@
                 <div class="imgBx">
                     <img src="images/HGHMNDS - DARK LIGHT.jpg">
                 <ul class="action">
-                    <li><i class="fa fa-heart" aria-hidden="true"></i>
+                    <li><i id ="heart" class="fa fa-heart" aria-hidden="true"></i>
                         <span>Add to Wishlist</span>
                     </li>
-                    <li><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <li><i id= "1st item" class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <span>Add to Cart</span>
                     </li>
                     <li><i class="fa fa-eye" aria-hidden="true"></i>
@@ -283,8 +294,7 @@
         </div>
     </section>
     <body2>
-        <ul2 class="pagination">
-          
+        <ul2 class="pagination">     
             <li class="pageNumber "><a href="SELLINSIDE1.html">1</a></li>
             <li class="pageNumber "><a href="SELLINSIDE2.html">2</a></li>
             <li class="pageNumber"><a href="SELLINSIDE3.html">3</a></li>

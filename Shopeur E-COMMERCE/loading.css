@@ -1,0 +1,25 @@
+#preloader {
+  background: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#preloader img {
+  width: 20%;
+  animation: updown 1s linear infinite;
+}
+@keyframes updown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}

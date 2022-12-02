@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopeur</title>
+    <link rel="stylesheet" href="loading.css" />
     <link rel="stylesheet" href="home.css" />
     <link
       id="homeicon"
@@ -14,6 +15,16 @@
     <script src="login.JS"></script>
   </head>
   <body>
+    <div id="preloader">
+      <img src="images/loadinglogo.png" alt="" />
+    </div>
+    <script>
+      window.addEventListener("load", function () {
+        var loader = document.getElementById("preloader");
+        loader.style.display = "none";
+        loader.delay(10).fadeOut("10");
+      });
+    </script>
     <section class="main">
       <header>
         <a href="inside.html"><img src="images/logo.png" class="logo" /></a>
@@ -22,7 +33,7 @@
           <li><a href="inside.html">HOME</a></li>
           <li><a id="test1" href="SELLINSIDE1.html">SELL ON SHOPEUR</a></li>
           <li><a href="TRACKINSIDE.html">TRACK MY ORDER</a></li>
-          <li><a href="CAREINSIDE.html">CUSTOMER CARE</a></li>
+          <li><a href="CAREINSIDE.html">FAQS</a></li>
         </ul>
       </header>
       <div class="content">

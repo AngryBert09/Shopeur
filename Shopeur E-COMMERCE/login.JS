@@ -29,7 +29,6 @@ if (matched) {
 }
 
 document.addEventListener("click", test);
-s;
 function test() {
   document.getElementsById("heart").href = "login.html";
 }

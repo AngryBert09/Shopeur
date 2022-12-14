@@ -102,6 +102,7 @@ header {
 }
 .btn:hover {
   letter-spacing: 2px;
+  color: white;
 }
 .slider {
   position: relative;

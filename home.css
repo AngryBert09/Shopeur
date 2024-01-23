@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.main {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 100px;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #af83d1,
+    #789ce9,
+    #31afe9,
+    #00bdd6,
+    #25c3be,
+    #57c5a2,
+    #83c586,
+    #a5c178,
+    #c2bc73,
+    #dab678,
+    #ecb185
+  );
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.logo {
+  max-width: 90px;
+}
+.navigation {
+  display: flex;
+}
+.navigation li {
+  list-style: none;
+}
+.navigation li a {
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-left: 40px;
+}
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .text {
+  width: 100%;
+  max-width: 600px;
+}
+.content .text h2 {
+  color: rgb(0, 0, 0);
+  font-size: 5em;
+  font-weight: 300;
+}
+.content .text h2 span {
+  font-weight: 700;
+}
+.content .text p {
+  color: black;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin: 20px 0;
+}
+.content .text p span {
+  color: rgb(119, 0, 255);
+}
+.content .text p span2 {
+  color: rgb(243, 23, 60);
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 20px 50px;
+  color: #fff;
+  background-color: black;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.btn:hover {
+  letter-spacing: 2px;
+  color: white;
+}
+.slider {
+  position: relative;
+}
+.slider .slides {
+  display: none;
+}
+.slider .slides.active {
+  display: block;
+}
+
+.slider .slides img {
+  width: 100%;
+  max-width: 600px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 30px 100px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.sci {
+  display: flex;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  margin-right: 20px;
+  display: inline-block;
+  transition: 0.25s;
+}
+.sci li a:hover {
+  transform: translateY(-5px);
+}
+.prevNext {
+  position: relative;
+  user-select: none;
+}
+.prevNext p {
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-align: end;
+  margin-bottom: 15px;
+}
+.prevNext p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -65px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background: #333;
+}
+.prevNext span {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 2em;
+  color: rgb(0, 0, 0);
+}
+.prevNext span:nth-child(2) {
+  margin-right: 20px;
+}
+
+/* now, make it responsive */
+@media (max-width: 991px) {
+  .main {
+    padding: 40px;
+  }
+  header {
+    padding: 20px 40px;
+  }
+  .logo {
+    max-width: 70px;
+  }
+  .content {
+    flex-direction: column;
+    margin: 120px 0 40px;
+  }
+  .content .text {
+    max-width: 100%;
+  }
+  .content .text h2 {
+    font-size: 4em;
+  }
+  .slider {
+    margin-top: 40px;
+  }
+  .slider .slides img {
+    width: 100%;
+    max-width: 420px;
+  }
+  .footer {
+    position: relative;
+    padding: 0;
+  }
+  .navigation {
+    display: none;
+  }
+  .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ca0c0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .navigation li a {
+    font-size: 1.5em;
+    margin: 10px 0;
+    display: inline-block;
+  }
+  .toggle {
+    position: relative;
+    width: 32px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .toggle.active {
+    position: fixed;
+    right: 40px;
+  }
+  .toggle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgb(2, 0, 0);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 0 rgb(0, 0, 0);
+    transition: 0.25s;
+  }
+  .toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 #fff;
+  }
+  .toggle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: translateY(10px);
+    transition: 0.25s;
+  }
+  .toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 px 0 #fff;
+  }
+}

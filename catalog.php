@@ -4,9 +4,11 @@ require_once "db.php";
 
 // Set $linkURL based on login status
 if (isset($_SESSION['user_id'])) {
-    $linkURL = "catalog.php";
+    $linkURL = "view-cart.php";
+    $linkHomeURL = "inside.php";
 } else {
     $linkURL = "login.php";
+    $linkHomeURL = "index.html";
 }
 
 // Pagination settings
@@ -17,6 +19,15 @@ $offset = ($page - 1) * $productsPerPage;
 // Query to retrieve products for the current page
 $sql = "SELECT * FROM products ORDER BY pid LIMIT $offset, $productsPerPage";
 $result = mysqli_query($conn, $sql);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the search term from the form
+    $searchTerm = $_POST["searchTerm"];
+
+    // Perform a simple search query
+    $sql = "SELECT * FROM products WHERE productName LIKE '%$searchTerm%'";
+    $result = mysqli_query($conn, $sql);
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +38,7 @@ $result = mysqli_query($conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add to cart now! Buy all you want with shopeur</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="SELLINSIDECSS.css">
+    <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="loading.css">
     <link id="homeicon" rel="shortcut icon" type="home-icon" href="images/tablogo3.ico" />
 </head>
@@ -39,16 +50,17 @@ $result = mysqli_query($conn, $sql);
 
     <section class="main">
         <header>
-            <a href="inside.php"><img src="images/logo.png" class="logo"></a>
+            <a href=<?php echo $linkHomeURL; ?>><img src="images/logo.png" class="logo"></a>
             <div class="toggle"></div>
             <ul class="navigation">
                 <div class="search">
-                    <input type="text" class="searchTerm" placeholder="SEARCH">
-                    <button type="submit" class="searchButton">
-                        <i class="fa fa-search"></i>
-                    </button>
+                    <form method="POST" action="catalog.php" class="search">
+                        <input type="text" name="searchTerm" class="searchTerm" placeholder="SEARCH">
+                        <button type="submit" class="searchButton">
+                            <i class="fa fa-search"></i>
+                        </button>
                 </div>
-                <li><img src="images/Sell Shop Images/cart.png" alt="" id="cart"></li>
+                <li><a href="view-cart.php"><img src="images/Sell Shop Images/cart.png" alt="" id="cart"></a></li>
             </ul>
         </header>
 
@@ -61,16 +73,13 @@ $result = mysqli_query($conn, $sql);
                         <img src="products/<?php echo $r['img'] ?>">
                         <ul class="action">
                             <a href="<?php echo $linkURL; ?>" id="link" style="text-decoration: none; color: black;">
-                                <li><i id="heart" class="fa fa-heart" aria-hidden="true"></i>
-                                    <span>Add to Wishlist</span>
-                                </li>
                                 <li><i id="1st item" class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     <span>Add to Cart</span>
                                 </li>
-                                <li><i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span>View Details</span>
-                                </li>
                             </a>
+                            <li><i class="fa fa-eye" aria-hidden="true"></i>
+                                <span>View Details</span>
+                            </li>
                         </ul>
                     </div>
                     <div class="content">

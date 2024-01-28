@@ -26,11 +26,9 @@ if (isset($_SESSION['user_id'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="css/test.css" />
-
+  <link rel="stylesheet" href="css/home.css" />
   <link id="homeicon" rel="shortcut icon" type="home-icon" href="images/tablogo3.ico" />
-  <script src="login.JS"></script>
+
 </head>
 
 <body>

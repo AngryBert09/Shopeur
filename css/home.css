@@ -15,20 +15,21 @@
   gap: 30px;
   padding: 30px 100px;
   background-image: linear-gradient(
-    to right top,
-    #d16ba5,
-    #af83d1,
-    #789ce9,
-    #31afe9,
-    #00bdd6,
-    #25c3be,
-    #57c5a2,
-    #83c586,
-    #a5c178,
-    #c2bc73,
-    #dab678,
-    #ecb185
-  );
+        to right top,
+        #d16ba5,
+        #af83d1,
+        #789ce9,
+        #31afe9,
+        #00bdd6,
+        #25c3be,
+        #57c5a2,
+        #83c586,
+        #a5c178,
+        #c2bc73,
+        #dab678,
+        #ecb185
+      );
+      
 }
 header {
   position: absolute;

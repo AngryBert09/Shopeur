@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 * {
   margin: 0;
   padding: 0;
@@ -48,12 +50,15 @@ header {
 }
 .navigation li {
   list-style: none;
+  cursor: pointer;
 }
-.navigation li a {
+.navigation li img {
   position: relative;
   color: rgb(0, 0, 0);
   text-decoration: none;
-  margin-left: 40px;
+  margin-left: 20px;
+  width: 80px;
+  margin-top: -20px;
 }
 .container {
   position: relative;
@@ -87,12 +92,10 @@ header {
 .container .card:hover .imgBx img {
   transform: scale(1.5);
 }
-.action a {
+.action {
   position: absolute;
   top: 10px;
   right: 10px;
-  text-decoration: none;
-  color: black;
 }
 .action li {
   position: relative;
@@ -222,5 +225,52 @@ body2 {
   display: flex;
   justify-content: center;
 }
+body {
+  background: white;
+  font-family: "Open Sans", sans-serif;
+}
 
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
 
+.searchTerm {
+  width: 100%;
+  border: 3px solid black;
+  border-right: none;
+  padding: 5px;
+  height: 50px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #000c07;
+  margin-left: 50px;
+  padding-left: 5px;
+  padding-right: 200px;
+}
+
+.searchTerm:focus {
+  color: #000505;
+}
+
+.searchButton {
+  width: 70px;
+  height: 50px;
+  border: 1px solid black;
+  background: black;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

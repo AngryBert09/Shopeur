@@ -44,12 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <div id="preloader">
-        <img src="images/loadinglogo.png" alt="" />
-    </div>
-
     <section class="main">
         <header>
+            <div id="preloader">
+                <img src="images/loadinglogo.png" alt="" />
+            </div>
             <a href=<?php echo $linkHomeURL; ?>><img src="images/logo.png" class="logo"></a>
             <div class="toggle"></div>
             <ul class="navigation">

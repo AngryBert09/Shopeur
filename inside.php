@@ -18,30 +18,21 @@ if (isset($_SESSION['user_id'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopeur</title>
-  <link rel="stylesheet" href="loading.css" />
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="loading.css" />
   <link id="homeicon" rel="shortcut icon" type="home-icon" href="images/tablogo3.ico" />
 
 </head>
 
+
 <body>
-  <div id="preloader">
-    <img src="images/loadinglogo.png" alt="" />
-  </div>
-  <script>
-    window.addEventListener("load", function() {
-      var loader = document.getElementById("preloader");
-      loader.style.display = "none";
-      loader.delay(10).fadeOut("10");
-    });
-  </script>
+
   <section class="main">
     <header>
       <a href="#"><img src="images/logo.png" class="logo" /></a>
@@ -52,7 +43,11 @@ if (isset($_SESSION['user_id'])) {
         <li><a href="https://app.gogoxpress.com/track">TRACK MY ORDER</a></li>
         <li><a href="faqs.html">FAQS</a></li>
       </ul>
+      <div id="preloader">
+        <img src="images/loadinglogo.png" alt="" />
+      </div>
     </header>
+
     <div class="content">
       <div class="text">
         <h2><span>SHOP</span>EUR</h2>
@@ -183,6 +178,13 @@ if (isset($_SESSION['user_id'])) {
         </div>
       </div>
     </div>
+    <script>
+      window.addEventListener("load", function() {
+        var loader = document.getElementById("preloader");
+        loader.style.display = "none";
+        loader.delay(10).fadeOut("10");
+      });
+    </script>
   </footer>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

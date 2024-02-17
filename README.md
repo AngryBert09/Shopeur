@@ -1,3 +1,3 @@
 # Shopeur
 
- --> Currently Working for VALIDATION
+ --> WORKING FOR OVERALL
